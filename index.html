@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS in Browser</title>
+</head>
+<body>
+   <script src="oop.js"></script>
+   <Script src="ArrayAndFunction.js"></Script>
+    <script>
+        document.write("welcome ");
+        
+// Maximum number
+        function Max(a,b){
+    return (a>b)?a:b;
+}   
+console.log(Max(2,6));
+
+//Address Object
+ let address={
+    street: '2 nd street',
+    city:'thanjavur',
+    zipcode:'613602'
+ };
+
+ function showAddress(address){
+    for (let show in address)
+        console.log(show, address[show]);
+ }
+
+ console.log(showAddress(address));
+
+ // factory function 
+
+ function factoryAddress(street,city,zipcode){
+    return{
+       street, // (street:street - this will return as street)
+       city,
+       zipcode
+    };
+ }
+ let factory = factoryAddress('abc','xyz','uyyyu');
+ console.log(factory);
+
+ //Constructor function 
+
+ function Constructoraddress(street,city,zipcode){
+    this.street=street;
+    this.city= city;
+    this.zipcode=zipcode;
+}
+let constr =  new Constructoraddress('oiqwud','hsgav','hjvasx');
+console.log(constr);
+
+// arrays
+// array from range
+ function arrayFromRange(min,max){
+    const output=[];
+    for(let i=min; i<=max; i++)
+       output.push(i);
+    return output;
+ }
+
+ const numbers =arrayFromRange(3,8);
+ console.log(numbers);
+
+ // includes
+ const num=[1,2,3,4,5,6,7];
+ function includes(array,searchElement){
+    for(let element of array)
+      if(element===searchElement)
+       return "yess!!! its includes";
+    return "No its not includess";
+ }
+
+ const inc =includes(num,5);
+ console.log(inc); 
+
+ 
+
+    </script>
+</body>
+</html>
